@@ -104,7 +104,7 @@ Al final, en Atlas queda la base `store_demo` con 2 productos: el portátil y el
 
 ## Qué hace cada archivo
 
-| Arquitectura y funcion de cada archivo
+| Archivo | Para qué sirve |
 |---|---|
 | `index.js` | Es el que se ejecuta: conecta y corre los cinco pasos. |
 | `src/config.js` | Lee el archivo `.env`. |
