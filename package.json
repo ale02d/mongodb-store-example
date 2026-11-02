@@ -1,0 +1,17 @@
+{
+  "name": "mongodb-store-example",
+  "version": "1.0.0",
+  "description": "Ejemplo sencillo de MongoDB con un catalogo de tienda en linea",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.8.0"
+  }
+}
