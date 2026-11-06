@@ -2,7 +2,7 @@
 
 ## ¿Qué hace este ejemplo?
 
- Es una base de datos que no usa tablas con columnas fijas: guarda **documentos** (parecidos a JSON), y cada documento puede tener campos distintos aunque estén en el mismo lugar.
+Es una base de datos que no usa tablas con columnas fijas: guarda **documentos** (parecidos a JSON), y cada documento puede tener campos distintos aunque estén en el mismo lugar.
 
 Para verlo lo simulamos con el catálogo de una tienda con tres productos que no se parecen en nada:
 
@@ -40,20 +40,26 @@ Usamos la versión gratuita de MongoDB Atlas (plan M0) y Node.js.
 ### 2. Descarga el proyecto
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-cd TU_REPOSITORIO
+git clone https://github.com/ale02d/mongodb-store-example.git
+cd mongodb-store-example
 npm install
 ```
 
 ### 3. Pon tu cadena de conexión
 
-Copia el archivo de ejemplo:
+Copia el archivo de ejemplo según tu sistema:
 
-```bash
-copy .env.example .env
-```
+- **Windows:**
 
-En Mac o Linux es `cp .env.example .env`.
+  ```bash
+  copy .env.example .env
+  ```
+
+- **Mac o Linux:**
+
+  ```bash
+  cp .env.example .env
+  ```
 
 Abre `.env` y cambia el valor de `MONGO_URI` por la cadena que copiaste de Atlas. Ese archivo no se sube a GitHub, así tu contraseña no queda a la vista.
 
