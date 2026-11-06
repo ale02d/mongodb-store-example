@@ -2,7 +2,7 @@
 
 ## ¿Qué hace este ejemplo?
 
-Es una base de datos que no usa tablas con columnas fijas: guarda **documentos** (parecidos a JSON), y cada documento puede tener campos distintos aunque estén en el mismo lugar.
+MongoDB es una base de datos que no usa tablas con columnas fijas: guarda **documentos** (parecidos a JSON), y cada documento puede tener campos distintos aunque estén en el mismo lugar.
 
 Para verlo lo simulamos con el catálogo de una tienda con tres productos que no se parecen en nada:
 
@@ -107,6 +107,24 @@ Productos restantes: 2
 ```
 
 Al final, en Atlas queda la base `store_demo` con 2 productos: el portátil y el libro.
+
+## Cómo verlo en Atlas
+
+Después de correr `npm start`, puedes comprobar que los datos están realmente en tu base:
+
+1. Entra a [MongoDB Atlas](https://cloud.mongodb.com) e inicia sesión.
+2. En el menú de la izquierda, ve a **Database > Clusters**.
+3. En tu cluster, haz clic en **Browse Collections**.
+4. A la izquierda, abre la base **`store_demo`** y luego la colección **`products`**.
+5. Deberías ver **2 documentos**: el portátil (con `specs`) y el libro (con `author` y `reviews`). La camiseta ya no aparece porque el paso 5 la borró.
+
+Para comprobar cada paso:
+
+- **Paso 3 (actualizar):** abre el documento de *Narnia*. Debe tener `stock: 29` y dos reseñas dentro de `reviews` (`ana` y `luis`).
+- **Paso 5 (borrar):** en el filtro escribe `{ "name": "Camiseta basica" }` y haz clic en **Apply**. No debe devolver nada.
+- **Paso 1 (insertar):** como la camiseta se borra al final, no la verás en Atlas. Si quieres verla, comenta el paso 5 en `src/demoSteps.js` y corre `npm start` otra vez.
+
+Si no aparece la base `store_demo`, revisa que `MONGO_URI` en `.env` sea la de tu cluster y que el programa haya terminado sin errores.
 
 ## Qué hace cada archivo
 
