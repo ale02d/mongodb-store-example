@@ -137,3 +137,8 @@ Si no aparece la base `store_demo`, revisa que `MONGO_URI` en `.env` sea la de t
 | `src/sampleData.js` | Los tres productos de ejemplo. |
 | `src/demoSteps.js` | Los cinco pasos que se muestran. |
 | `src/consoleOutput.js` | Imprime los títulos y las listas. |
+## ¿Como se ve en mongoDB?
+
+<img width="1296" height="454" alt="image" src="https://github.com/user-attachments/assets/26d81d24-e3cd-42f3-8124-0ec0824748ff" />
+
+<img width="983" height="402" alt="image" src="https://github.com/user-attachments/assets/365fb9c8-7340-4f59-b34e-daa3d8265b8a" />
